@@ -6,7 +6,7 @@ import pandas as pd
 
 app = Dash(__name__)
 
-df = pd.read_csv("Onlinedata_Juli_August.csv")
+df = pd.read_csv(r'C:\Users\Tereza\Desktop\datanorlys\Onlinedata_Juli_August.csv')
 df.sort_values(by=['time_utc'], inplace=True, ascending=True)
 date = [int((i[5:7]+i[8:10])) for i in df['time_utc']]
 df['date'] = date
